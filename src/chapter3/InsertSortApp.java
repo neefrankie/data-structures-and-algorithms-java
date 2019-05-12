@@ -27,13 +27,25 @@ class ArrayInsert {
         int outerIndex;
 
         for (outerIndex = 1; outerIndex < nElems; outerIndex++) {
+            System.out.println("=========== Round " + outerIndex + " =============");
+
             long temp = a[outerIndex];
+            System.out.println("Remove marked item " + temp + " at " + outerIndex);
+
             innerIndex = outerIndex;
+            System.out.println("Start shift at position " + innerIndex);
+
             while (innerIndex > 0 && a[innerIndex - 1] >= temp) {
+                System.out.println("Find item at " + (innerIndex - 1) + " larger than marker. Shift to right");
                 a[innerIndex] = a[innerIndex - 1];
                 --innerIndex;
             }
             a[innerIndex] = temp;
+            System.out.println("Inserted marked item at " + innerIndex);
+
+            System.out.println("Now items are:");
+
+            display();
         }
     }
 }
