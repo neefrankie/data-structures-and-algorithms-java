@@ -1,6 +1,6 @@
-package chapter5;
+package chapter5.simplelinked;
 
-public class LinkList2App {
+public class LinkListApp {
     public static void main(String[] args) {
         LinkList theList = new LinkList();
 
@@ -21,9 +21,18 @@ public class LinkList2App {
 
         Link d = theList.delete(66);
         if (d != null) {
-            System.out.println("Delete link with key " + d.iData);
+            System.out.println("Deleted link with key " + d.iData);
         } else {
             System.out.println("Can't delete link");
+        }
+
+        theList.displayList();
+
+        while (!theList.isEmpty()) {
+            Link aLink = theList.deleteFirst();
+            System.out.print("Deleted ");
+            aLink.displayLink();
+            System.out.println();
         }
 
         theList.displayList();

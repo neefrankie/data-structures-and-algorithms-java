@@ -1,6 +1,6 @@
-package chapter5;
+package chapter5.simplelinked;
 
-class Link {
+public class Link {
     public int iData;
     public double dData;
     public Link next;

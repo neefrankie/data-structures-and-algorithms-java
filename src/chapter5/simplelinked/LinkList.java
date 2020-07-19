@@ -1,6 +1,6 @@
-package chapter5;
+package chapter5.simplelinked;
 
-class LinkList {
+public class LinkList {
     private Link first;
 
     public LinkList() {
@@ -8,7 +8,7 @@ class LinkList {
     }
 
     public boolean isEmpty() {
-        return (first == null);
+        return first == null;
     }
 
     public void insertFirst(int id, double dd) {
@@ -19,35 +19,12 @@ class LinkList {
 
     public Link find(int key) {
         Link current = first;
-        while(current.iData != key) {
-            if (current.next == null) {
-                return null;
-            } else {
-                current = current.next;
-            }
-        }
-
-        return current;
-    }
-
-    public Link delete(int key) {
-        Link current = first;
-        Link previous = first;
         while (current.iData != key) {
             if (current.next == null) {
                 return null;
             } else {
-                previous = current;
                 current = current.next;
             }
-        }
-
-        // If deleting target is the first item, change first to pointing to the second item.
-        if (current == first) {
-            first = first.next;
-        } else {
-            // If deleting target is in hte middle of list, link the previous one to the next one.
-            previous.next = current.next;
         }
 
         return current;
@@ -59,13 +36,37 @@ class LinkList {
         return temp;
     }
 
+    public Link delete(int key) {
+        Link current = first;
+        Link previous = first;
+
+        while (current.iData != key) {
+            if (current.next == null) {
+                return null;
+            } else {
+                previous = current;
+                current = current.next;
+            }
+        }
+
+        if (current == first) {
+            first = first.next;
+        } else {
+            previous.next = current.next;
+        }
+
+        return current;
+    }
+
     public void displayList() {
         System.out.print("List (first-->last): ");
         Link current = first;
-        while(current != null) {
+
+        while (current != null) {
             current.displayLink();
             current = current.next;
         }
+
         System.out.println();
     }
 }
