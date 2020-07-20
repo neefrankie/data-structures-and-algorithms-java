@@ -1,10 +1,10 @@
 package chapter5.doubleended;
 
-public class FirstLastList {
+public class DoubleEndedList {
     private Link first;
     private Link last;
 
-    public FirstLastList() {
+    public DoubleEndedList() {
         first = null;
         last = null;
     }
@@ -26,6 +26,7 @@ public class FirstLastList {
 
     public void insertLast(long dd) {
         Link newLink = new Link(dd);
+
         if (isEmpty()) {
             first = newLink;
         } else {
@@ -37,17 +38,21 @@ public class FirstLastList {
 
     public long deleteFirst() {
         long temp = first.dData;
+
         if (first.next == null) {
             last = null;
         }
 
         first = first.next;
+
         return temp;
     }
 
     public void displayList() {
-        System.out.print("List (first-->last): ");
+        System.out.print("List (first--> last): ");
+
         Link current = first;
+
         while (current != null) {
             current.displayLink();
             current = current.next;

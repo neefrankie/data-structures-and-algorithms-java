@@ -1,8 +1,8 @@
 package chapter5.doubleended;
 
-public class FirstLastApp {
+public class DoubleEndedApp {
     public static void main(String[] args) {
-        FirstLastList theList = new FirstLastList();
+        DoubleEndedList theList = new DoubleEndedList();
 
         theList.insertFirst(22);
         theList.insertFirst(44);
