@@ -18,4 +18,14 @@ public class ListNode {
     public void displayNode() {
         System.out.print(val + " ");
     }
+
+    static public void displayAll(ListNode n) {
+        if (n == null) {
+            return;
+        }
+
+        n.displayNode();
+
+        displayAll(n.next);
+    }
 }
