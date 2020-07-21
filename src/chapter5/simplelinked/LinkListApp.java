@@ -1,6 +1,7 @@
 package chapter5.simplelinked;
 
 public class LinkListApp {
+
     public static void main(String[] args) {
         LinkList theList = new LinkList();
 
