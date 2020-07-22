@@ -1,4 +1,4 @@
-package chapter5.addnumber;
+package leetcode.addnumber;
 
 public class ListNode {
     int val;
