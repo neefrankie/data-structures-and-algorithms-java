@@ -1,8 +1,15 @@
 package chapter5.sortedlist;
 
-public class SortedListApp {
-    public static void main(String[] args) {
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class SortedListTest {
+
+    @Test
+    public void sortedListApp() {
         SortedList theSortedList = new SortedList();
+
         theSortedList.insert(20);
         theSortedList.insert(40);
 
