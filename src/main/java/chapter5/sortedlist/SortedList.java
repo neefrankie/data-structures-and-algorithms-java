@@ -11,8 +11,8 @@ class SortedList {
     // Used to sort an array.
     SortedList(Link[] linkArr) {
         first = null;
-        for (int j = 0; j < linkArr.length; j++) {
-            insert(linkArr[j]);
+        for (Link link : linkArr) {
+            insert(link);
         }
     }
 
@@ -22,21 +22,7 @@ class SortedList {
 
     void insert(long key) {
         Link newLink = new Link(key);
-        Link previous = null;
-        Link current = first;
-
-        while (current != null && key > current.dData) {
-            previous = current;
-            current = current.next;
-        }
-
-        if (previous == null) {
-            first = newLink;
-        } else {
-            previous.next = newLink;
-        }
-
-        newLink.next = current;
+        insert(newLink);
     }
 
     void insert(Link k) {
