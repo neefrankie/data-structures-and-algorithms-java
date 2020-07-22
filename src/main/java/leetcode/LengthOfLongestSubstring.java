@@ -53,25 +53,4 @@ public class LengthOfLongestSubstring {
 
         return ans;
     }
-
-    public static void main(String[] args) {
-        LengthOfLongestSubstring solution = new LengthOfLongestSubstring();
-
-        String s1 = "abcabcbb";
-        String s2 = "bbbbbb";
-        String s3 = "pwwkew";
-
-        System.out.println(s1 + ": " + solution.bruteForce(s1));
-
-        System.out.println(s2 + ": " + solution.bruteForce(s2));
-
-        System.out.println(s3 + ": " + solution.bruteForce(s3));
-
-
-        System.out.println(s1 + ": " + solution.slidingWindow(s1));
-
-        System.out.println(s2 + ": " + solution.slidingWindow(s2));
-
-        System.out.println(s3 + ": " + solution.slidingWindow(s3));
-    }
 }
