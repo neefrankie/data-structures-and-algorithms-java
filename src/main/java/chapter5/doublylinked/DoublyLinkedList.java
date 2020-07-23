@@ -53,7 +53,7 @@ public class DoublyLinkedList {
 
     Link deleteLast() {
         Link temp = last;
-        if (first.next == null) {
+        if (last.previous == null) {
             first = null;
         } else {
             last.previous.next = null;
