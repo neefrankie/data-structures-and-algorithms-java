@@ -45,7 +45,7 @@ class SortedList {
 
     Link remove() {
         Link temp = first;
-        first =first.next;
+        first = first.next;
         return temp;
     }
 
