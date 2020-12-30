@@ -1,6 +1,6 @@
 package chapter7.qs2;
 
-public class ArrayIns {
+class ArrayIns {
     private long[] theArray;
     private int nElems;
 
