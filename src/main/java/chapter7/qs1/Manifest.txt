@@ -1,0 +1,2 @@
+Main-Class: chapter7.qs1.App
+Name: Quick Sort 2
