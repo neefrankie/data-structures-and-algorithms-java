@@ -1,0 +1,2 @@
+Main-Class: chapter7.partition.App
+Name: Partition
