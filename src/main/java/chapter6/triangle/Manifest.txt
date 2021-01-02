@@ -1,0 +1,2 @@
+Main-Class: chapter6.triangle.App
+Name: Triangle

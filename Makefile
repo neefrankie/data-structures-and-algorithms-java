@@ -1,12 +1,18 @@
 src_base_dir := src/main/java
 jar_base_dir := build/jar
 
+triangle := chapter6/triangle
 shell_sort := chapter7/shellsort
 partition := chapter7/partition
 quick_sort1 := chapter7/qs1
 quick_sort2 := chapter7/qs2
 
 .PHONY:
+triangle : jardir
+	javac -d build/$(triangle) -verbose $(src_base_dir)/$(triangle)/*.java
+
+	jar --create --verbose --file $(jar_base_dir)/triangle.jar --manifest $(src_base_dir)/$(triangle)/Manifest.txt -C build/$(triangle) .
+
 shellsort : jardir
 	javac -d build/$(shell_sort) -verbose $(src_base_dir)/$(shell_sort)/*.java
 
