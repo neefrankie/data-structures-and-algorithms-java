@@ -6,6 +6,7 @@ shell_sort := chapter7/shellsort
 partition := chapter7/partition
 quick_sort1 := chapter7/qs1
 quick_sort2 := chapter7/qs2
+binary_tree := chapter8/tree
 
 .PHONY:
 triangle : jardir
@@ -32,6 +33,11 @@ qstwo : jardir
 	javac -d build/$(quick_sort2) -verbose $(src_base_dir)/$(quick_sort2)/*.java
 
 	jar --create --verbose --file $(jar_base_dir)/quick-sort2.jar --manifest $(src_base_dir)/$(quick_sort2)/Manifest.txt -C build/$(quick_sort2) .
+
+bintree : jardir
+	javac -d build/$(binary_tree) -verbose $(src_base_dir)/$(binary_tree)/*.java
+
+	jar --create --verbose --file $(jar_base_dir)/binary-truee.jar --manifest $(src_base_dir)/$(binary_tree)/Manifest.txt -C build/$(binary_tree) .
 
 jardir :
 	mkdir -p $(jar_base_dir)
