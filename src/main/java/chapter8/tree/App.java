@@ -27,7 +27,7 @@ public class App {
             int choice = getChar();
             switch (choice) {
                 case 's':
-                theThree.displayTree();
+                    theThree.displayTree();
                     break;
 
                 case 'i':

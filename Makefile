@@ -37,7 +37,7 @@ qstwo : jardir
 bintree : jardir
 	javac -d build/$(binary_tree) -verbose $(src_base_dir)/$(binary_tree)/*.java
 
-	jar --create --verbose --file $(jar_base_dir)/binary-truee.jar --manifest $(src_base_dir)/$(binary_tree)/Manifest.txt -C build/$(binary_tree) .
+	jar --create --verbose --file $(jar_base_dir)/binary-tree.jar --manifest $(src_base_dir)/$(binary_tree)/Manifest.txt -C build/$(binary_tree) .
 
 jardir :
 	mkdir -p $(jar_base_dir)

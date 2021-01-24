@@ -185,18 +185,18 @@ public class Tree {
     }
 
     public void displayTree() {
-        Stack globalStack = new Stack<Node>();
+        Stack<Node> globalStack = new Stack<Node>();
         globalStack.push(root);
         int nBlanks = 32;
         boolean isRowEmpty = false;
         System.out.println();
 
-        while (isRowEmpty) {
-            Stack localStack = new Stack<Node>();
+        while (!isRowEmpty) {
+            Stack<Node> localStack = new Stack<Node>();
             isRowEmpty = true;
 
             for (int j = 0; j < nBlanks; j++) {
-                System.out.print(' ');
+                System.out.print('*');
             }
 
             while (!globalStack.isEmpty()) {
@@ -215,7 +215,7 @@ public class Tree {
                     localStack.push(null);
                 }
                 for (int j = 0; j < nBlanks*2-2; j++) {
-                    System.out.print(' ');
+                    System.out.print('*');
                 }
             }
             System.out.println();
