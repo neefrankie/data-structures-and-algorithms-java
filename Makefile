@@ -7,6 +7,7 @@ partition := chapter7/partition
 quick_sort1 := chapter7/qs1
 quick_sort2 := chapter7/qs2
 binary_tree := chapter8/tree
+hash_table := chapter11/hash
 
 .PHONY:
 triangle : jardir
@@ -38,6 +39,10 @@ bintree : jardir
 	javac -d build/$(binary_tree) -verbose $(src_base_dir)/$(binary_tree)/*.java
 
 	jar --create --verbose --file $(jar_base_dir)/binary-tree.jar --manifest $(src_base_dir)/$(binary_tree)/Manifest.txt -C build/$(binary_tree) .
+
+hashtable : jardir
+	javac -d build/$(hash_table) -verbose $(src_base_dir)/$(hash_table)/*.java
+	jar --create --verbose --file $(jar_base_dir)/hash-table.jar --manifest $(src_base_dir)/$(hash_table)/Manifest.txt -C build/$(hash_table) .
 
 jardir :
 	mkdir -p $(jar_base_dir)
